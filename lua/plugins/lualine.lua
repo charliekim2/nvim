@@ -13,6 +13,7 @@ return {
       red = "#FF4A4A",
       fg = "#c3ccdc",
       bg = "#112638",
+      innerbg = nil,
       inactive_bg = "#2c3043",
     }
 
@@ -20,27 +21,27 @@ return {
       normal = {
         a = { bg = colors.blue, fg = colors.bg, gui = "bold" },
         b = { bg = colors.bg, fg = colors.fg },
-        c = { bg = colors.bg, fg = colors.fg },
+        c = { bg = colors.innerbg, fg = colors.fg },
       },
       insert = {
         a = { bg = colors.green, fg = colors.bg, gui = "bold" },
         b = { bg = colors.bg, fg = colors.fg },
-        c = { bg = colors.bg, fg = colors.fg },
+        c = { bg = colors.innerbg, fg = colors.fg },
       },
       visual = {
         a = { bg = colors.violet, fg = colors.bg, gui = "bold" },
         b = { bg = colors.bg, fg = colors.fg },
-        c = { bg = colors.bg, fg = colors.fg },
+        c = { bg = colors.innerbg, fg = colors.fg },
       },
       command = {
         a = { bg = colors.yellow, fg = colors.bg, gui = "bold" },
         b = { bg = colors.bg, fg = colors.fg },
-        c = { bg = colors.bg, fg = colors.fg },
+        c = { bg = colors.innerbg, fg = colors.fg },
       },
       replace = {
         a = { bg = colors.red, fg = colors.bg, gui = "bold" },
         b = { bg = colors.bg, fg = colors.fg },
-        c = { bg = colors.bg, fg = colors.fg },
+        c = { bg = colors.innerbg, fg = colors.fg },
       },
       inactive = {
         a = { bg = colors.inactive_bg, fg = colors.semilightgray, gui = "bold" },
