@@ -13,3 +13,4 @@ end
 vim.api.nvim_create_user_command("Indent", indent, {nargs = 1})
 
 vim.keymap.set("n","<leader>mm",":MarkdownPreviewToggle<cr>",defaults)
+
