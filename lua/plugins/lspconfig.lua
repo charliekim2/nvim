@@ -65,6 +65,12 @@ return {
 			debounce_text_changes = 150,
 		}
 
+		lspconfig.pyright.setup {
+			on_attach = on_attach,
+			capabilities = capabilities,
+			flags = lsp_flags
+		}
+
     lspconfig.emmet_ls.setup {
 			on_attach = on_attach,
 			capabilities = capabilities,
