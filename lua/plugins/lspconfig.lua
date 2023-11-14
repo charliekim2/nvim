@@ -14,7 +14,7 @@ return {
 		-- used to enable autocompletion (assign to every lsp server config)
 		local capabilities = cmp_nvim_lsp.default_capabilities()
 
-		local servers = { "pyright", "tsserver", "emmet_ls" }
+		local servers = { "pyright", "tsserver", "emmet_ls", "clangd" }
 		for _, lsp in ipairs(servers) do
 			lspconfig[lsp].setup({
 				capabilities = capabilities,
