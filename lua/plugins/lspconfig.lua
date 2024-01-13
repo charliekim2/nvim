@@ -5,6 +5,9 @@ return {
 		{ "antosha417/nvim-lsp-file-operations", config = true },
 	},
 	config = function()
+		-- import mason
+		require("mason").setup()
+		require("mason-lspconfig").setup()
 		-- import lspconfig plugin
 		local lspconfig = require("lspconfig")
 
