@@ -1,4 +1,4 @@
-return{
+return {
 	{
 		"rebelot/kanagawa.nvim",
 		priority = 1000,
@@ -6,9 +6,20 @@ return{
 	{
 		"folke/tokyonight.nvim",
 		priority = 1000,
-		config = function ()
-			vim.cmd.colorscheme("tokyonight")
-		end
+	},
+	{
+		"rmehri01/onenord.nvim",
+		priority = 1000,
+		config = function()
+			require("onenord").setup({
+				styles = {
+					comments = "italic",
+					strings = "NONE",
+					keywords = "italic",
+				},
+			})
+			vim.cmd.colorscheme("onenord")
+		end,
 	},
 	{
 		"ellisonleao/gruvbox.nvim",
@@ -21,5 +32,5 @@ return{
 	{
 		"catppuccin/nvim",
 		priority = 1000,
-	}
+	},
 }

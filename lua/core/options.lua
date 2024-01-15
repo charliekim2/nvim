@@ -4,7 +4,7 @@ vim.opt.relativenumber = true
 vim.opt.number = true
 vim.opt.shiftwidth = 2
 vim.opt.tabstop = 2
-vim.opt.wrap = false
+vim.opt.wrap = true
 
 local indent = function(opts)
 	vim.opt.shiftwidth = tonumber(opts.fargs[1])
