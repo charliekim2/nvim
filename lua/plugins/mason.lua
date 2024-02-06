@@ -23,6 +23,20 @@ return {
 				},
 			},
 		})
+
+		mason_tool_installer.setup({
+			ensure_installed = {
+				"lua_ls",
+				"pyright",
+				"pylint",
+				"eslint_d",
+				"stylua",
+				"tsserver",
+				"emmet_ls",
+				"html",
+				"clangd",
+			},
+		})
 	end,
 	lazy = false,
 }

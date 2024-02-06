@@ -3,12 +3,12 @@ return {
 	config = function()
 		vim.keymap.set("n", "<leader>dk", function()
 			require("dap").continue()
-		end)
+		end, { desc = "DAP continue" })
 		vim.keymap.set("n", "<leader>dl", function()
 			require("dap").run_last()
-		end)
+		end, { desc = "Run last debug" })
 		vim.keymap.set("n", "<leader>b", function()
 			require("dap").toggle_breakpoint()
-		end)
+		end, { desc = "Toggle DAP breakpoint" })
 	end,
 }
