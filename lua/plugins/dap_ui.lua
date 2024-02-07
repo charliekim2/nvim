@@ -6,13 +6,13 @@ return {
 
 		vim.keymap.set("n", "<leader>do", function()
 			dapui.open()
-		end)
+		end, { desc = "Open DAP UI" })
 		vim.keymap.set("n", "<leader>dc", function()
 			dapui.close()
-		end)
+		end, { desc = "Close DAP UI" })
 		vim.keymap.set("n", "<leader>dt", function()
 			dapui.toggle()
-		end)
+		end, { desc = "Toggle DAP UI" })
 
 		dap.listeners.after.event_initialized["dapui_config"] = function()
 			dapui.open()
