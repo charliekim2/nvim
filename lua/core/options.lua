@@ -5,6 +5,8 @@ vim.opt.number = true
 vim.opt.shiftwidth = 2
 vim.opt.tabstop = 2
 vim.opt.wrap = true
+vim.opt.guicursor = "n-v-i-c:block-Cursor"
+vim.opt.guicursor = "i:blinkon1"
 
 local indent = function(opts)
 	vim.opt.shiftwidth = tonumber(opts.fargs[1])
