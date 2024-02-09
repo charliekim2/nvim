@@ -19,9 +19,6 @@ return {
 			},
 		})
 
-		autopairs.add_rule(rule("$$", "$", "pandoc"))
-		autopairs.add_rule(rule("$", "$", "pandoc"))
-
 		-- import nvim-autopairs completion functionality
 		local cmp_autopairs = require("nvim-autopairs.completion.cmp")
 
