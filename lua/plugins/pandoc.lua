@@ -5,4 +5,11 @@ return {
 		"godlygeek/tabular",
 		"vim-pandoc/vim-pandoc",
 	},
+	config = function()
+		vim.cmd("let g:pandoc#modules#enabled = []")
+	end,
+	-- "preservim/vim-markdown",
+	-- dependencies = {
+	-- 	"godlygeek/tabular",
+	-- },
 }

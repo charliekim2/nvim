@@ -29,3 +29,6 @@ vim.keymap.set("n", "<leader>ds", vim.diagnostic.show, { desc = "Show diagnostic
 vim.keymap.set("n", "<leader>dh", vim.diagnostic.hide, { desc = "Hide diagnostics" })
 
 vim.keymap.set("n", "<leader>nh", ":noh<cr>", { desc = "Hide search highlighting" })
+
+vim.keymap.set("n", "<leader>ce", ":Copilot enable<cr>", { desc = "Enable Copilot" })
+vim.keymap.set("n", "<leader>cd", ":Copilot disable<cr>", { desc = "Disable Copilot" })

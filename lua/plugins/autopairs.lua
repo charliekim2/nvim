@@ -19,6 +19,11 @@ return {
 			},
 		})
 
+		autopairs.add_rule(rule("$", "$", { "markdown", "pandoc" }))
+		autopairs.add_rule(rule("$$", "$", { "markdown", "pandoc" }))
+		autopairs.add_rule(rule("*", "*", { "markdown", "pandoc" }))
+		autopairs.add_rule(rule("**", "*", { "markdown", "pandoc" }))
+
 		-- import nvim-autopairs completion functionality
 		local cmp_autopairs = require("nvim-autopairs.completion.cmp")
 
