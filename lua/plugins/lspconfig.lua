@@ -17,7 +17,10 @@ return {
 		-- used to enable autocompletion (assign to every lsp server config)
 		local capabilities = cmp_nvim_lsp.default_capabilities()
 
-		local servers = { "pyright", "tsserver", "emmet_ls", "clangd", "omnisharp_mono" }
+		-- Add new filetypes
+		vim.filetype.add({ extension = { templ = "templ" } })
+
+		local servers = { "pyright", "tsserver", "emmet_ls", "clangd", "gopls", "templ", "htmx", "html", "tailwindcss" }
 		for _, lsp in ipairs(servers) do
 			lspconfig[lsp].setup({
 				capabilities = capabilities,

@@ -10,20 +10,23 @@ return {
 	{
 		"rmehri01/onenord.nvim",
 		priority = 1000,
-		config = function()
-			require("onenord").setup({
-				styles = {
-					comments = "italic",
-					strings = "NONE",
-					keywords = "italic",
-				},
-			})
-			vim.cmd.colorscheme("onenord")
-		end,
+		-- config = function()
+		-- 	require("onenord").setup({
+		-- 		styles = {
+		-- 			comments = "italic",
+		-- 			strings = "NONE",
+		-- 			keywords = "italic",
+		-- 		},
+		-- 	})
+		-- 	vim.cmd.colorscheme("onenord")
+		-- end,
 	},
 	{
 		"ellisonleao/gruvbox.nvim",
 		priority = 1000,
+		config = function()
+			vim.cmd.colorscheme("gruvbox")
+		end,
 	},
 	{
 		"nyoom-engineering/oxocarbon.nvim",
