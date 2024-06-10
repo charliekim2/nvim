@@ -25,10 +25,12 @@ vim.keymap.set("v", "<leader>a|", ":Tab /|<cr>", defaults)
 vim.keymap.set("v", "<leader>a:", ":Tab /:<cr>", defaults)
 vim.keymap.set("v", "<leader>a=", ":Tab /=<cr>", defaults)
 
-vim.keymap.set("n", "<leader>ds", vim.diagnostic.show, { desc = "Show diagnostics" })
-vim.keymap.set("n", "<leader>dh", vim.diagnostic.hide, { desc = "Hide diagnostics" })
+vim.keymap.set("n", "<leader>sd", vim.diagnostic.show, { desc = "Show diagnostics" }, defaults)
+vim.keymap.set("n", "<leader>hd", vim.diagnostic.hide, { desc = "Hide diagnostics" }, defaults)
 
-vim.keymap.set("n", "<leader>nh", ":noh<cr>", { desc = "Hide search highlighting" })
+vim.keymap.set("n", "<leader>nh", ":noh<cr>", { desc = "Hide search highlighting" }, defaults)
 
-vim.keymap.set("n", "<leader>ce", ":Copilot enable<cr>", { desc = "Enable Copilot" })
-vim.keymap.set("n", "<leader>cd", ":Copilot disable<cr>", { desc = "Disable Copilot" })
+vim.keymap.set("n", "<leader>ce", ":Copilot enable<cr>", { desc = "Enable Copilot" }, defaults)
+vim.keymap.set("n", "<leader>cd", ":Copilot disable<cr>", { desc = "Disable Copilot" }, defaults)
+
+vim.keymap.set("n", "<leader>d", '"_d', { desc = "Delete without yanking" }, defaults)
