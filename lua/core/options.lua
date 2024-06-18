@@ -33,4 +33,8 @@ vim.keymap.set("n", "<leader>nh", ":noh<cr>", { desc = "Hide search highlighting
 vim.keymap.set("n", "<leader>ce", ":Copilot enable<cr>", { desc = "Enable Copilot" }, defaults)
 vim.keymap.set("n", "<leader>cd", ":Copilot disable<cr>", { desc = "Disable Copilot" }, defaults)
 
-vim.keymap.set("n", "<leader>d", '"_d', { desc = "Delete without yanking" }, defaults)
+vim.keymap.set({ "n", "v" }, "<leader>d", '"_d', { desc = "Delete without yanking" }, defaults)
+
+vim.keymap.set("n", "<leader>nn", ":Navbuddy<cr>", { desc = "Open Navbuddy" }, defaults)
+
+vim.keymap.set("n", "<leader>tg", ":TagbarToggle<cr>", { desc = "Open Tagbar" }, defaults)

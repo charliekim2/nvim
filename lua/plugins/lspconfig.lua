@@ -1,6 +1,13 @@
 return {
 	"neovim/nvim-lspconfig",
 	dependencies = {
+		{
+			"SmiteshP/nvim-navbuddy",
+			dependencies = {
+				"SmiteshP/nvim-navic",
+				"MunifTanjim/nui.nvim",
+			},
+		},
 		"hrsh7th/cmp-nvim-lsp",
 		{ "antosha417/nvim-lsp-file-operations", config = true },
 	},
@@ -17,6 +24,9 @@ return {
 		-- used to enable autocompletion (assign to every lsp server config)
 		local capabilities = cmp_nvim_lsp.default_capabilities()
 
+		-- Navbuddy setup
+		local navbuddy = require("nvim-navbuddy")
+
 		-- Add new filetypes
 		vim.filetype.add({ extension = { templ = "templ" } })
 
@@ -24,6 +34,9 @@ return {
 		for _, lsp in ipairs(servers) do
 			lspconfig[lsp].setup({
 				capabilities = capabilities,
+				on_attach = function(client, bufnr)
+					navbuddy.attach(client, bufnr)
+				end,
 			})
 		end
 
