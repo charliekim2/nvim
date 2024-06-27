@@ -25,7 +25,6 @@ vim.keymap.set("v", "<leader>a|", ":Tab /|<cr>", defaults)
 vim.keymap.set("v", "<leader>a:", ":Tab /:<cr>", defaults)
 vim.keymap.set("v", "<leader>a=", ":Tab /=<cr>", defaults)
 
-vim.keymap.set("n", "<leader>sd", vim.diagnostic.show, { desc = "Show diagnostics" }, defaults)
 vim.keymap.set("n", "<leader>hd", vim.diagnostic.hide, { desc = "Hide diagnostics" }, defaults)
 
 vim.keymap.set("n", "<leader>nh", ":noh<cr>", { desc = "Hide search highlighting" }, defaults)
