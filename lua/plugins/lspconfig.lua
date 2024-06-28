@@ -31,8 +31,7 @@ return {
 		-- Add new filetypes
 		vim.filetype.add({ extension = { templ = "templ" } })
 
-		local servers =
-			{ "pyright", "tsserver", "emmet_ls", "clangd", "gopls", "templ", "htmx", "html", "tailwindcss", "svelte" }
+		local servers = { "pyright", "tsserver", "emmet_ls", "clangd", "gopls", "htmx", "html", "svelte" }
 		for _, lsp in ipairs(servers) do
 			lspconfig[lsp].setup({
 				capabilities = capabilities,
@@ -41,6 +40,40 @@ return {
 				-- end,
 			})
 		end
+
+		local custom_format = function()
+			if vim.bo.filetype == "templ" then
+				local bufnr = vim.api.nvim_get_current_buf()
+				local filename = vim.api.nvim_buf_get_name(bufnr)
+				local cmd = "templ fmt " .. vim.fn.shellescape(filename)
+
+				vim.fn.jobstart(cmd, {
+					on_exit = function()
+						-- Reload the buffer only if it's still the current buffer
+						if vim.api.nvim_get_current_buf() == bufnr then
+							vim.cmd("e!")
+						end
+					end,
+				})
+			else
+				vim.lsp.buf.format()
+			end
+		end
+
+		lspconfig.templ.setup({
+			on_attach = function(client, bufnr)
+				local opts = { buffer = bufnr, remap = false }
+				-- other configuration options
+				vim.keymap.set("n", "<leader>lf", custom_format, opts)
+			end,
+			capabilities = capabilities,
+		})
+
+		lspconfig.tailwindcss.setup({
+			capabilities = capabilities,
+			filetypes = { "templ", "astro", "javascript", "typescript", "react", "html" },
+			init_options = { userLanguages = { templ = "html" } },
+		})
 
 		lspconfig.lua_ls.setup({
 			capabilities = capabilities,
