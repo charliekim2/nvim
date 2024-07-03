@@ -27,7 +27,7 @@ return {
 		mason_tool_installer.setup({
 			ensure_installed = {
 				"lua_ls",
-				"pyright",
+				"ruff_lsp",
 				"pylint",
 				"eslint_d",
 				"stylua",
@@ -35,6 +35,7 @@ return {
 				"emmet_ls",
 				"html",
 				"clangd",
+				"prettier",
 			},
 		})
 	end,

@@ -31,7 +31,7 @@ return {
 		-- Add new filetypes
 		vim.filetype.add({ extension = { templ = "templ" } })
 
-		local servers = { "pyright", "tsserver", "emmet_ls", "clangd", "gopls", "htmx", "html", "svelte" }
+		local servers = { "ruff_lsp", "tsserver", "emmet_ls", "clangd", "gopls", "htmx", "html" }
 		for _, lsp in ipairs(servers) do
 			lspconfig[lsp].setup({
 				capabilities = capabilities,
