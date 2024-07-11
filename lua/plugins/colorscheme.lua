@@ -6,6 +6,9 @@ return {
 	{
 		"folke/tokyonight.nvim",
 		priority = 1000,
+		config = function()
+			vim.cmd.colorscheme("tokyonight")
+		end,
 	},
 	{
 		"rmehri01/onenord.nvim",
@@ -24,9 +27,6 @@ return {
 	{
 		"ellisonleao/gruvbox.nvim",
 		priority = 1000,
-		config = function()
-			vim.cmd.colorscheme("gruvbox")
-		end,
 	},
 	{
 		"nyoom-engineering/oxocarbon.nvim",
