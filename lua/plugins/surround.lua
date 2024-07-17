@@ -1,4 +1,5 @@
 return {
 	"tpope/vim-surround",
-	lazy = false,
+	lazy = true,
+	event = "VeryLazy",
 }

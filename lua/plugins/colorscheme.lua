@@ -1,7 +1,8 @@
 return {
 	{
 		"rebelot/kanagawa.nvim",
-		priority = 1000,
+		lazy = true,
+		event = "ColorSchemePre",
 	},
 	{
 		"folke/tokyonight.nvim",
@@ -12,7 +13,8 @@ return {
 	},
 	{
 		"rmehri01/onenord.nvim",
-		priority = 1000,
+		lazy = true,
+		event = "ColorSchemePre",
 		-- config = function()
 		-- 	require("onenord").setup({
 		-- 		styles = {
@@ -26,14 +28,17 @@ return {
 	},
 	{
 		"ellisonleao/gruvbox.nvim",
-		priority = 1000,
+		lazy = true,
+		event = "ColorSchemePre",
 	},
 	{
 		"nyoom-engineering/oxocarbon.nvim",
-		priority = 1000,
+		lazy = true,
+		event = "ColorSchemePre",
 	},
 	{
 		"catppuccin/nvim",
-		priority = 1000,
+		lazy = true,
+		event = "ColorSchemePre",
 	},
 }

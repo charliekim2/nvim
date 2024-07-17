@@ -1,5 +1,7 @@
 return {
 	"stevearc/conform.nvim",
+	lazy = true,
+	event = "BufWrite",
 	config = function()
 		local conform = require("conform")
 

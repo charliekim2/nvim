@@ -39,5 +39,6 @@ return {
 			},
 		})
 	end,
-	lazy = false,
+	lazy = true,
+	event = "CmdlineEnter",
 }
