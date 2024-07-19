@@ -19,6 +19,7 @@ return {
 				lua = { "stylua" },
 				python = { "isort", "black" },
 				templ = { "templ" },
+				c = { "clang-format" },
 			},
 			format_on_save = {
 				lsp_fallback = true,
