@@ -3,4 +3,6 @@ return {
 	config = function()
 		require("autoclose").setup()
 	end,
+	event = "InsertEnter",
+	lazy = true,
 }
