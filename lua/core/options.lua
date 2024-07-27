@@ -25,15 +25,15 @@ vim.keymap.set("v", "<leader>a|", ":Tab /|<cr>", defaults)
 vim.keymap.set("v", "<leader>a:", ":Tab /:<cr>", defaults)
 vim.keymap.set("v", "<leader>a=", ":Tab /=<cr>", defaults)
 
-vim.keymap.set("n", "<leader>hd", vim.diagnostic.hide, { desc = "Hide diagnostics" }, defaults)
+vim.keymap.set("n", "<leader>hd", vim.diagnostic.hide, { desc = "Hide diagnostics" })
 
-vim.keymap.set("n", "<leader>nh", ":noh<cr>", { desc = "Hide search highlighting" }, defaults)
+vim.keymap.set("n", "<leader>nh", ":noh<cr>", { desc = "Hide search highlighting" })
 
-vim.keymap.set("n", "<leader>ce", ":Copilot enable<cr>", { desc = "Enable Copilot" }, defaults)
-vim.keymap.set("n", "<leader>cd", ":Copilot disable<cr>", { desc = "Disable Copilot" }, defaults)
+vim.keymap.set("n", "<leader>ce", ":Copilot enable<cr>", { desc = "Enable Copilot" })
+vim.keymap.set("n", "<leader>cd", ":Copilot disable<cr>", { desc = "Disable Copilot" })
 
-vim.keymap.set({ "n", "v" }, "<leader>d", '"_d', { desc = "Delete without yanking" }, defaults)
+vim.keymap.set({ "n", "v" }, "<leader>d", '"_d', { desc = "Delete without yanking" })
 
-vim.keymap.set("n", "<leader>nn", ":Navbuddy<cr>", { desc = "Open Navbuddy" }, defaults)
+vim.keymap.set("n", "<leader>nn", ":Navbuddy<cr>", { desc = "Open Navbuddy" })
 
-vim.keymap.set("n", "<leader>tg", ":TagbarToggle<cr>", { desc = "Open Tagbar" }, defaults)
+vim.keymap.set("n", "<leader>tg", ":TagbarToggle<cr>", { desc = "Open Tagbar" })
