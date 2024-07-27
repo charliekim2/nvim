@@ -1,5 +1,3 @@
-local defaults = { noremap = true, silent = true }
-
 vim.opt.relativenumber = true
 vim.opt.number = true
 vim.opt.shiftwidth = 2
@@ -15,15 +13,15 @@ end
 
 vim.api.nvim_create_user_command("Indent", indent, { nargs = 1 })
 
-vim.keymap.set("n", "<leader>mm", ":MarkdownPreviewToggle<cr>", defaults)
+vim.keymap.set("n", "<leader>mm", ":MarkdownPreviewToggle<cr>", { desc = "Toggle Markdown preview" })
 
-vim.keymap.set("n", "<leader>tt", ":TransparentToggle<cr>", defaults)
+vim.keymap.set("n", "<leader>tt", ":TransparentToggle<cr>", { desc = "Toggle transparency" })
 
 vim.keymap.set("n", "<leader>ww", ":set wrap!<cr>", { desc = "Toggle line wrapping" })
 
-vim.keymap.set("v", "<leader>a|", ":Tab /|<cr>", defaults)
-vim.keymap.set("v", "<leader>a:", ":Tab /:<cr>", defaults)
-vim.keymap.set("v", "<leader>a=", ":Tab /=<cr>", defaults)
+vim.keymap.set("v", "<leader>a|", ":Tab /|<cr>", { desc = "Align by pipe" })
+vim.keymap.set("v", "<leader>a:", ":Tab /:<cr>", { desc = "Align by colon" })
+vim.keymap.set("v", "<leader>a=", ":Tab /=<cr>", { desc = "Align by equals" })
 
 vim.keymap.set("n", "<leader>hd", vim.diagnostic.hide, { desc = "Hide diagnostics" })
 
@@ -35,5 +33,3 @@ vim.keymap.set("n", "<leader>cd", ":Copilot disable<cr>", { desc = "Disable Copi
 vim.keymap.set({ "n", "v" }, "<leader>d", '"_d', { desc = "Delete without yanking" })
 
 vim.keymap.set("n", "<leader>nn", ":Navbuddy<cr>", { desc = "Open Navbuddy" })
-
-vim.keymap.set("n", "<leader>tg", ":TagbarToggle<cr>", { desc = "Open Tagbar" })
