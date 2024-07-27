@@ -72,17 +72,21 @@ return {
 					{ mode = "n", keys = "]" },
 					{ mode = "x", keys = "]" },
 
+					-- `[` key
+					{ mode = "n", keys = "[" },
+					{ mode = "x", keys = "[" },
+
 					-- Visual ai
 					{ mode = "v", keys = "a" },
 					{ mode = "v", keys = "i" },
 				},
 
 				clues = {
-					{ mode = "n", keys = "<Leader>f", text = "+Telescope" },
-					{ mode = "n", keys = "<Leader>e", text = "+Tree" },
-					{ mode = "n", keys = "<Leader>n", text = "+Swap Next" },
-					{ mode = "n", keys = "<Leader>p", text = "+Swap Previous" },
-					{ mode = "n", keys = "<Leader>w", text = "+Workspace" },
+					{ mode = "n", keys = "<Leader>f", desc = "+Telescope" },
+					{ mode = "n", keys = "<Leader>e", desc = "+Tree" },
+					{ mode = "n", keys = "<Leader>n", desc = "+Swap Next" },
+					{ mode = "n", keys = "<Leader>p", desc = "+Swap Previous" },
+					{ mode = "n", keys = "<Leader>w", desc = "+Workspace" },
 					miniclue.gen_clues.builtin_completion(),
 					miniclue.gen_clues.g(),
 					miniclue.gen_clues.marks(),

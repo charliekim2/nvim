@@ -8,6 +8,10 @@ return {
 	},
 	config = function()
 		vim.cmd("let g:pandoc#modules#enabled = []")
+
+		vim.keymap.set("v", "<leader>a|", ":Tab /|<cr>", { desc = "Align by pipe" })
+		vim.keymap.set("v", "<leader>a:", ":Tab /:<cr>", { desc = "Align by colon" })
+		vim.keymap.set("v", "<leader>a=", ":Tab /=<cr>", { desc = "Align by equals" })
 	end,
 	-- "preservim/vim-markdown",
 	-- dependencies = {
