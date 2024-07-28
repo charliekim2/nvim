@@ -10,6 +10,11 @@ return {
 			-- import nvim-treesitter plugin
 			local treesitter = require("nvim-treesitter.configs")
 
+			-- TS folding
+			vim.wo.foldmethod = "expr"
+			vim.wo.foldlevel = 99
+			vim.wo.foldexpr = "v:lua.vim.treesitter.foldexpr()"
+
 			-- configure treesitter
 			treesitter.setup({ -- enable syntax highlighting
 

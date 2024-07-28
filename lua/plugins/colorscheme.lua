@@ -15,5 +15,8 @@ return {
 		"zenbones-theme/zenbones.nvim",
 		lazy = true,
 		event = "ColorSchemePre",
+		config = function()
+			vim.g.zenbones_compat = 1
+		end,
 	},
 }

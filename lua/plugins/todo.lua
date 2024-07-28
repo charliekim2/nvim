@@ -7,5 +7,5 @@ return {
 		-- refer to the configuration section below
 	},
 	lazy = true,
-	event = "CmdlineEnter",
+	event = { "BufReadPre", "BufNewFile" },
 }
