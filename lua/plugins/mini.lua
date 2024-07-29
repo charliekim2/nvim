@@ -4,30 +4,45 @@ return {
 		version = false,
 		lazy = true,
 		event = { "BufReadPre", "BufNewFile" },
+		config = function()
+			require("mini.ai").setup()
+		end,
 	},
 	{
 		"echasnovski/mini.align",
 		version = false,
 		lazy = true,
 		event = { "BufReadPre", "BufNewFile" },
+		config = function()
+			require("mini.align").setup()
+		end,
 	},
 	{
 		"echasnovski/mini.move",
 		version = false,
 		lazy = true,
 		event = { "BufReadPre", "BufNewFile" },
+		config = function()
+			require("mini.move").setup()
+		end,
 	},
 	{
 		"echasnovski/mini.operators",
 		version = false,
 		lazy = true,
 		event = { "BufReadPre", "BufNewFile" },
+		config = function()
+			require("mini.operators").setup()
+		end,
 	},
 	{
 		"echasnovski/mini.splitjoin",
 		version = false,
 		lazy = true,
 		event = { "BufReadPre", "BufNewFile" },
+		config = function()
+			require("mini.splitjoin").setup()
+		end,
 	},
 	{
 		"echasnovski/mini.clue",
