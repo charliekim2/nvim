@@ -94,6 +94,14 @@ return {
 					miniclue.gen_clues.windows(),
 					miniclue.gen_clues.z(),
 				},
+
+				window = {
+					delay = 200,
+					config = {
+						border = "single",
+						width = 40,
+					},
+				},
 			})
 		end,
 	},
