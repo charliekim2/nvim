@@ -1,20 +1,20 @@
 return {
 	{
 		"pineapplegiant/spaceduck",
-		priority = 1000,
-		config = function()
-			vim.cmd.colorscheme("spaceduck")
-		end,
+		lazy = true,
+		event = "ColorSchemePre",
 	},
 	{
 		"rafi/awesome-vim-colorschemes",
-		lazy = true,
-		event = "ColorSchemePre",
+		priority = 1000,
+		config = function()
+			vim.cmd.colorscheme("minimalist")
+		end,
 	},
 	{
 		"zenbones-theme/zenbones.nvim",
+		dependencies = { "rktjmp/lush.nvim" },
 		lazy = true,
 		event = "ColorSchemePre",
-		dependencies = { "rktjmp/lush.nvim" },
 	},
 }

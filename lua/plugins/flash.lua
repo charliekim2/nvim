@@ -14,7 +14,15 @@ return {
 		},
 		{
 			"S",
-			mode = { "n", "x", "o" },
+			mode = { "n", "o" },
+			function()
+				require("flash").treesitter()
+			end,
+			desc = "Flash Treesitter",
+		},
+		{
+			"<leader>S",
+			mode = { "x" },
 			function()
 				require("flash").treesitter()
 			end,

@@ -17,7 +17,7 @@ return {
 				yaml = { "yamlfmt" },
 				markdown = { "prettier" },
 				lua = { "stylua" },
-				python = { "isort", "black" },
+				python = { "black" },
 				templ = { "templ" },
 				c = { "clang-format" },
 			},

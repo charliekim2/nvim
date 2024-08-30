@@ -26,6 +26,7 @@ return {
 
 		mason_tool_installer.setup({
 			ensure_installed = {
+				"black",
 				"lua_ls",
 				"pyright",
 				"pylint",
