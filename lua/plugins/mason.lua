@@ -32,7 +32,7 @@ return {
 				"pylint",
 				"eslint_d",
 				"stylua",
-				"tsserver",
+				"ts_ls",
 				"emmet_ls",
 				"html",
 				"clangd",
