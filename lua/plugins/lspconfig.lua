@@ -93,6 +93,9 @@ return {
 			end,
 		})
 
+		-- Gleam setup, as it is not available on Mason
+		lspconfig.gleam.setup({})
+
 		-- local servers = { "pyright", "tsserver", "emmet_ls", "clangd", "gopls", "htmx", "html" }
 		-- for _, lsp in ipairs(servers) do
 		-- 	lspconfig[lsp].setup({
