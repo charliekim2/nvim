@@ -29,6 +29,7 @@ return {
 		vim.filetype.add({ extension = { templ = "templ" } })
 
 		local custom_format = function()
+			vim.cmd("w")
 			if vim.bo.filetype == "templ" then
 				local bufnr = vim.api.nvim_get_current_buf()
 				local filename = vim.api.nvim_buf_get_name(bufnr)
@@ -54,6 +55,24 @@ return {
 				})
 			end,
 
+			["htmx"] = function()
+				lspconfig.htmx.setup({
+					capabilities = capabilities,
+					filetypes = { "html", "templ" },
+				})
+			end,
+			["emmet_ls"] = function()
+				lspconfig.emmet_ls.setup({
+					capabilities = capabilities,
+					filetypes = { "html", "css", "templ" },
+				})
+			end,
+			["clangd"] = function()
+				lspconfig.clangd.setup({
+					capabilities = capabilities,
+					filetypes = { "c", "cpp", "objc", "objcpp", "cuda" }, -- exclude "proto"
+				})
+			end,
 			["templ"] = function()
 				lspconfig.templ.setup({
 					on_attach = function(client, bufnr)
